@@ -8,9 +8,11 @@ pipeline {
     }
 
     environment {
-        REPO_URL = "https://github.com/sibilucky/java-maven-app.git"  // Use the parameterized repository URL
-        BRANCH_NAME = "main"  // Use the parameterized branch name
-        IMAGE_TAG = "latest"  // Use the parameterized image tag
+         REPO_URL = "https://github.com/sibilucky/java-maven-app.git"
+         BRANCH_NAME = "main"
+         IMAGE_TAG = "latest"
+         JAVA_HOME = '/path/to/java17'  // Ensure this is the correct path to Java 17
+         PATH = "${JAVA_HOME}/bin:${env.PATH}"
     }
 
     stages {
