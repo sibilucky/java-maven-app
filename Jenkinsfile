@@ -17,7 +17,7 @@ pipeline {
 
     tools {
         // Use a specific Maven version if it's set up in Jenkins
-        maven 'Maven3'  // Reference to the Maven installation configured in Jenkins
+        maven 'maven3'  // Reference to the Maven installation configured in Jenkins
     }
 
     stages {
