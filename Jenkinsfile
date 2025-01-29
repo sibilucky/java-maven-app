@@ -15,6 +15,11 @@ pipeline {
          PATH = "${JAVA_HOME}/bin:${env.PATH}"
     }
 
+    tools {
+        // Use a specific Maven version if it's set up in Jenkins
+        maven 'Maven_3_8_1'  // Reference to the Maven installation configured in Jenkins
+    }
+
     stages {
         stage('Checkout') {
             steps {
