@@ -8,8 +8,6 @@ pipeline {
     }
 
     environment {
-        JAVA_HOME = '/path/to/java17'  // Point to the correct Java 17 installation
-        PATH = "${JAVA_HOME}/bin:${env.PATH}"
         REPO_URL = "https://github.com/sibilucky/java-maven-app.git"  // Use the parameterized repository URL
         BRANCH_NAME = "main"  // Use the parameterized branch name
         IMAGE_TAG = "latest"  // Use the parameterized image tag
