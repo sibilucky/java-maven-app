@@ -67,8 +67,8 @@ pipeline {
                 echo "Deploying Docker container with tag: ${params.TAG}"
                 sh """
                      #!/bin/bash
-                    docker build -t java-maven-app:latest .
-                    docker run -d -p 8082:8080 java-maven-app:latest
+                    docker build -t java-maven-app:latest:${params.TAG} .
+                    docker run -d -p 8082:8080 java-maven-app:latest:${params.TAG}
                     """
 
                
